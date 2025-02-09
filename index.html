@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Welcome to iOS DEB - A stylized board with store buttons for Zebra.">
+<meta name="description" content="Welcome to iOS DEB - A stylized board with store buttons for Sileo and Zebra.">
 <title>Stylized Board with Buttons</title>
 <style>
   * {
@@ -123,6 +123,8 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s, transform 0.2s;
   }
 
@@ -139,7 +141,6 @@
     opacity: 0.5;
     pointer-events: none;
   }
-
 </style>
 </head>
 <body>
@@ -165,29 +166,13 @@
   </div>
 
   <div class="buttons-container">
-    <button class="store-button" id="zebra-button">Zebra</button>
-    <button class="store-button" id="siloe-button">Siloe</button>
+    <a class="store-button" rel="nofollow noopener" href="zbra://sources/add/https://tibatman.github.io/BT/">
+      Zebra
+    </a>
+    <a class="store-button" rel="nofollow noopener" href="sileo://source/https://tibatman.github.io/BT/">
+      Sileo
+    </a>
   </div>
-
- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const zebraButton = document.getElementById("zebra-button");
-    const sileoButton = document.getElementById("sileo-button");
-
-    const zebraURL = "zbra://sources/add/https://tibatman.github.io/BT/";
-    const sileoURL = "sileo://sources/add/https://tibatman.github.io/BT/";
-
-    zebraButton.addEventListener("click", function() {
-      window.location.href = zebraURL;
-    });
-
-    sileoButton.addEventListener("click", function() {
-      window.location.href = sileoURL;
-    });
-
-  });
-</script>
-
 
 </body>
 </html>
