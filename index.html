@@ -165,15 +165,18 @@
   </div>
 
   <div class="buttons-container">
-    <button class="store-button" id="siloe-button">Zebra</button>
+    <button class="store-button" id="zebra-button">Zebra</button>
+    <button class="store-button" id="siloe-button">Siloe</button>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const zebraButton = document.getElementById("siloe-button");
-      const zebraURL = "siloe://sources/add/https://tibatman.github.io/BT/";
+      const zebraButton = document.getElementById("zebra-button");
+      const siloeButton = document.getElementById("siloe-button");
 
-      // تحقق مما إذا كان الجهاز يدعم فتح الروابط
+      const zebraURL = "zbra://sources/add/https://tibatman.github.io/BT/";
+      const siloeURL = "siloe://sources/add/https://tibatman.github.io/BT/"; // استبدل بالرابط الصحيح
+
       function checkAppSupport(url, button) {
         const testLink = document.createElement("a");
         testLink.href = url;
@@ -192,10 +195,14 @@
       }
 
       zebraButton.addEventListener("click", function() {
-        window.location.href = siloeaURL;
+        window.location.href = zebraURL;
       });
 
-      checkAppSupport(zebraURL, zebraButton);
+      siloeButton.addEventListener("click", function() {
+        window.location.href = siloeURL;
+      });
+
+      
     });
   </script>
 
