@@ -1,6 +1,8 @@
-‎Origin: TI Batman
-‎Label: TIBatman
-‎Suite: stable
-‎Version: 1.0
-‎Architectures: iphoneos-arm64 iphoneos-arm64e
-‎Components: main
+Origin: BT Repo
+Label: BT
+Suite: stable
+Version: 1.0
+Codename: ios
+Architecture: iphoneos-arm
+Components: main
+Description: BT Repo for Sileo
