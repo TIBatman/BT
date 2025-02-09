@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Welcome to iOS DEB - A stylized board with store buttons for Zebra.">
+<title>Stylized Board with Buttons</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #fffb3b;
+    font-size: 2rem;
+  }
+
+  .board {
+    height: 150px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .outer-circle {
+    position: absolute;
+    height: 130px;
+    width: 230px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    background: #fffb3b;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+  }
+
+  .bat {
+    background: #000;
+    position: absolute;
+    height: 112px;
+    width: 212px;
+    border-radius: 50%;
+    top: 9px;
+    left: 9px;
+  }
+
+  .sphere {
+    background: #fffb3b;
+    position: absolute;
+    height: 70px;
+    width: 33px;
+    border-radius: 50%;
+  }
+
+  .sphere-1 { top: 67px; left: 44px; transform: rotate(-41deg); }
+  .sphere-2 { top: 73px; left: 68px; transform: rotate(-15deg); }
+  .sphere-3 { top: 67px; right: 44px; transform: rotate(41deg); }
+  .sphere-4 { top: 73px; right: 68px; transform: rotate(15deg); }
+
+  .small-sphere {
+    background: #fffb3b;
+    position: absolute;
+    height: 40px;
+    width: 37px;
+    border-radius: 50%;
+  }
+
+  .sphere-5 { top: 0px; left: 57px; transform: rotate(15deg); }
+  .sphere-6 { top: 0px; right: 57px; transform: rotate(15deg); }
+
+  .square {
+    background: #fffb3b;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+  }
+
+  .square-1 { top: 0px; left: 74px; }
+  .square-2 { top: 0px; right: 74px; }
+
+  .trapezoid {
+    top: 0px;
+    left: 95px;
+    position: absolute;
+    border-bottom: 12px solid #fffb3b;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    height: 0;
+    width: 11px;
+    transform: rotate(180deg);
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .store-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fffb3b;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .store-button:hover {
+    background-color: #e0db3a;
+    transform: scale(1.05);
+  }
+
+  .store-button:active {
+    transform: scale(0.95);
+  }
+
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to iOS DEB</h1>
+  </header>
+
+  <div class="board">
+    <div class="outer-circle">
+      <div class="bat">
+        <div class="sphere sphere-1"></div>
+        <div class="sphere sphere-2"></div>
+        <div class="sphere sphere-3"></div>
+        <div class="sphere sphere-4"></div>
+        <div class="small-sphere sphere-5"></div>
+        <div class="small-sphere sphere-6"></div>
+        <div class="square square-1"></div>
+        <div class="square square-2"></div>
+        <div class="trapezoid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons-container">
+    <button class="store-button" id="siloe-button">Zebra</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const zebraButton = document.getElementById("siloe-button");
+      const zebraURL = "siloe://sources/add/https://tibatman.github.io/BT/";
+
+      // تحقق مما إذا كان الجهاز يدعم فتح الروابط
+      function checkAppSupport(url, button) {
+        const testLink = document.createElement("a");
+        testLink.href = url;
+        testLink.style.display = "none";
+        document.body.appendChild(testLink);
+
+        const start = Date.now();
+        document.location = url;
+
+        setTimeout(() => {
+          if (Date.now() - start < 2000) {
+            button.classList.add("disabled");
+            button.innerText = "Not Supported";
+          }
+        }, 1500);
+      }
+
+      zebraButton.addEventListener("click", function() {
+        window.location.href = siloeaURL;
+      });
+
+      checkAppSupport(zebraURL, zebraButton);
+    });
+  </script>
+
+</body>
+</html>
