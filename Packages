@@ -1,0 +1,42 @@
+
+
+Package: com.yourcompany.dly
+Name: Tweak Remover
+Version: 0.0.1-89+debug
+Architecture: iphoneos-arm64
+Depends: mobilesubstrate
+Filename: ./debs/com.yourcompany.dly_0.0.1-89+debug_iphoneos-arm64.deb
+Size: 19608
+MD5sum: cc45d81a6a9caa6ba279a91647c6f5bf
+SHA1: f2a563cfbbcbd96c97cf314cd7552079ff4be49d
+SHA256: bce4758dfa7da7394a873b42924a7722a694321d552d598818cd293c7b74a606
+Section: Utilities
+Description: An awesome application!
+Author: os
+Depiction: 
+SileoDepiction: 
+Icon: https://tools4cydia.info/images/اضف مسار ايقونة.png
+Installed-size: 0
+
+
+
+
+Package: com.yourcompany.dly
+Name: Tweak Remover
+Version: 0.0.1-89+debug
+Architecture: iphoneos-arm64
+Depends: mobilesubstrate
+Filename: ./debs/com.yourcompany.dly_0.0.1-89+debug_iphoneos-arm64.deb
+Size: 19608
+MD5sum: cc45d81a6a9caa6ba279a91647c6f5bf
+SHA1: f2a563cfbbcbd96c97cf314cd7552079ff4be49d
+SHA256: bce4758dfa7da7394a873b42924a7722a694321d552d598818cd293c7b74a606
+Section: Utilities
+Description: An awesome application!
+Author: os
+Depiction: 
+SileoDepiction: 
+Icon: https://tools4cydia.info/images/اضف مسار ايقونة.png
+Installed-size: 20
+
+
