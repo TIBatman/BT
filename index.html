@@ -175,18 +175,7 @@
       const siloeButton = document.getElementById("siloe-button");
 
       const zebraURL = "zbra://sources/add/https://tibatman.github.io/BT/";
-      const siloeURL = "siloe://sources/add/https://tibatman.github.io/BT/"; // استبدل بالرابط الصحيح
-
-      function checkAppSupport(url, button) {
-        const testLink = document.createElement("a");
-        testLink.href = url;
-        testLink.style.display = "none";
-        document.body.appendChild(testLink);
-
-        const start = Date.now();
-        document.location = url;
-
-       
+      const siloeURL = "siloe://sources/add/https://tibatman.github.io/BT/"; 
 
       zebraButton.addEventListener("click", function() {
         window.location.href = zebraURL;
@@ -196,7 +185,6 @@
         window.location.href = siloeURL;
       });
 
-      
     });
   </script>
 
