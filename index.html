@@ -186,13 +186,7 @@
         const start = Date.now();
         document.location = url;
 
-        setTimeout(() => {
-          if (Date.now() - start < 2000) {
-            button.classList.add("disabled");
-            button.innerText = "Not Supported";
-          }
-        }, 1500);
-      }
+       
 
       zebraButton.addEventListener("click", function() {
         window.location.href = zebraURL;
