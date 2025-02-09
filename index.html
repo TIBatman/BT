@@ -169,24 +169,25 @@
     <button class="store-button" id="siloe-button">Siloe</button>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const zebraButton = document.getElementById("zebra-button");
-      const siloeButton = document.getElementById("siloe-button");
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const zebraButton = document.getElementById("zebra-button");
+    const sileoButton = document.getElementById("sileo-button");
 
-      const zebraURL = "zbra://sources/add/https://tibatman.github.io/BT/";
-      const siloeURL = "siloe://sources/add/https://tibatman.github.io/BT/"; 
+    const zebraURL = "zbra://sources/add/https://tibatman.github.io/BT/";
+    const sileoURL = "sileo://sources/add/https://tibatman.github.io/BT/";
 
-      zebraButton.addEventListener("click", function() {
-        window.location.href = zebraURL;
-      });
-
-      siloeButton.addEventListener("click", function() {
-        window.location.href = siloeURL;
-      });
-
+    zebraButton.addEventListener("click", function() {
+      window.location.href = zebraURL;
     });
-  </script>
+
+    sileoButton.addEventListener("click", function() {
+      window.location.href = sileoURL;
+    });
+
+  });
+</script>
+
 
 </body>
 </html>
